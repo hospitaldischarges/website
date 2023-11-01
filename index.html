@@ -779,34 +779,52 @@ style="width:40.0%" align="right" /><br />
 <p><strong>More than 13,000 people are unable to leave hospitals in
 England each day - despite being classed as fit to leave.</strong></p>
 <p>That is according to the latest piece of research by the Shared Data
-Unit which has looked into the extent of delayed discharges - sometimes
-referred to as ‘bed blocking’ - at every acute hospital in England.</p>
-<p>At some trusts, only one in ten patients eligible to leave can
-actually do so at the end of each day, with the North West home to the
-largest proportion of delays.</p>
+Unit, which has looked into the extent of delayed discharges - sometimes
+referred to as ‘bed blocking’ - at acute hospital trusts in England.</p>
+<p>We found that, at some trusts, only <strong>one in every ten</strong>
+adult patients eligible to leave can actually do so at the end of each
+day, with the North West home to the largest proportion of delays.</p>
 <p>Almost half of those were because patients were waiting for care
 packages to begin in a facility or at home, but many were also waiting
 for community hospital beds.</p>
 <p>While levels of delays have remained stable over the course of the
-last year nationally, winter peaks have almost doubled since a decade
-ago.</p>
-<p>The government has released £600m in 2023-24 that aims to help people
-out of hospitals and into care settings, but experts say the plans fall
-short of the reform required.</p>
-<p>Age UK has urged the government to put more funding towards improving
-the pay carers receive, in order to increase staffing levels in the
-sector and clear the backlogs.</p>
-<p>Director of the charity Caroline Abrahams, said: “Unless and until a
-Government really grips social care and the need to pay care
-professionals more - not just over the winter but as part of their basic
-pay - many older people will be at risk of longer hospital stays than
-are strictly necessary.”</p>
+last year nationally, the winter peak seen in 2022 was almost double
+what it was a decade ago.</p>
+<p>The government has released £600m in 2023-24, which aims to help
+councils recruit and retain more care workers, but health leaders say
+the plans fall short of the reform required.</p>
+<p>“At the heart of this is persistent understaffing across all care
+settings,” said the Royal College of Nursing director Patricia
+Marquis.</p>
+<p>“We would like to see a long-term plan for social care that matches
+the ambitions of the recent NHS Long-term Workforce Plan. Put simply, we
+need more nursing staff in the community and social care sector.”</p>
+<p>This website contains:</p>
+<ul>
+<li>Details on the extent of delays at every acute hospital trust in
+England, easily accessible through the navigation bar at the top of each
+page.</li>
+<li>Health board and national level <a
+href="https://docs.google.com/spreadsheets/d/1h3aE7xR2eq7h1XoEErtIkYxrvpV-pfXZuvNywtJnkpk/edit?usp=sharing">data
+for Scotland</a></li>
+<li>Expert quotes from Age UK, the Royal College of Nursing and The
+Nuffield Trust.</li>
+<li>Rights of response from the Department for Health and Social
+Care,Stockport NHS Foundation Trust and Stockport Council.</li>
+<li>Detailed background, findings and methodology</li>
+<li><strong><em>Please note the website and accompanying data may be
+subject to edit.</em></strong></li>
+</ul>
+<p><strong>Although the available data did not allow for comparison
+between health boards in Scotland and Wales - we do have national
+findings for both nations Just scroll down to Scotland and Wales in the
+What did we Find? section below. No comparable data was available for
+Northern Ireland.</strong></p>
 </div>
 <div id="background" class="section level2">
 <h2>Background</h2>
-<p>Delayed discharges are where an inpatient in a hospital trust bed is
-classed as medically fit to leave but does not do so at the end of that
-day.</p>
+<p>Delayed discharges occur when a patient in a hospital bed is classed
+as medically fit to leave but does not do so at the end of that day.</p>
 <p>They have been a major concern for hospital leaders for the best part
 of a decade.</p>
 <p>Back in April 2013, a <a
@@ -846,23 +864,50 @@ href="https://www.gov.uk/government/publications/market-sustainability-and-impro
 Sustainability and Improvement Fund</a> - to increase their social care
 workforce in 2023-24 and 2024-25. Although it has been welcomed, medical
 leaders say this is still a short term solution to a wider problem (See
-the ‘Expert quotes’ section).</p>
-<p>That is partly because, In April, the Department of Health and Social
-Care <a href="https://www.bbc.co.uk/news/uk-65171795">halved plans to
-spend £500m</a> on improving the training, recruitment and retention of
-social workers.</p>
-<p>Both of the last two measures are part of a £1.7bn investment in the
-care sector outlined in the 2021 White Paper <a
-href="https://www.gov.uk/government/publications/people-at-the-heart-of-care-adult-social-care-reform-white-paper/people-at-the-heart-of-care-adult-social-care-reform#empowering-those-who-draw-on-care-unpaid-carers-and-families">People
-at the Heart of Care</a>.</p>
+the ‘Expert quotes’ section and the Rights of Response section for a
+fuller background to government funding provided by DHSC).</p>
+</div>
+<div id="methodology" class="section level2">
+<h2>Methodology</h2>
+<p>We collected data from the <a
+href="https://www.england.nhs.uk/statistics/statistical-work-areas/discharge-delays-acute-data/">NHS
+England situation reports (‘sitreps’) on discharge delays</a>, which
+“collects data for all inpatients 18 and over including critical care
+and COVID-19 positive patients but excluding paediatrics, maternity, and
+deceased patients.” The data does not cover Mental Health Trusts or
+specialised Trusts including Children’s and Women’s Trusts.</p>
+<p>The data was combined, cleaned, and filtered to trusts, using a
+Python notebook. A series of R notebooks were then used to filter the
+data further to the twelve months from June 2022 to June 2023, and
+perform an analysis for each trust, calculating an average percentage of
+patients per night who had been identified as ready to be discharged
+that day but were still occupying a bed at midnight, and comparing that
+to the national average.</p>
+<p>The notebooks also identified, for each trust, the highest proportion
+of patients in that situation during the period covered (and for those
+where the figure was 100%, the number of days when that was the case);
+the day during that period when the most patients were left in hospital
+who could have been discharged; the worst day of the week; and the rate
+for that day.</p>
+<p>Finally, a table was created showing the figures for the region the
+trust was situated in, so that those could be seen in a regional
+context. This analysis was used to generate a HTML version of the
+analysis and ‘parameterised’, making it possible to build a website with
+over 120 pages presenting a picture for each trust in the dataset.</p>
 </div>
 <div id="what-did-we-find" class="section level2">
 <h2>What did we find?</h2>
 <p>We analysed a full year of NHS data showing the number of people who
 are classed as fit to leave hospital but are unable to because of delays
 at the close of each day.</p>
-<p>Data was available for each acute hospital trust in England, 164 in
-total, between April 2022 and July 2023 inclusive.</p>
+<p>Data was available for 120 acute hospital trusts in England, 120
+between April 2022 and July 2023 inclusive.</p>
+<p>We excluded Ashford St Peter’s Hospital Trust in North Surrey from
+our findings after the trust said the data it supplied was incorrect and
+had been affected by a technical error. We also excluded Yeovil District
+Hospital NHS Foundation Trust as it merged with <a
+href="https://en.wikipedia.org/wiki/Somerset_NHS_Foundation_Trust">Somerset
+NHS Foundation Trust</a> in April 2023.</p>
 <div id="how-many-people-face-delays-in-leaving-hospital-each-day"
 class="section level3">
 <h3>How many people face delays in leaving hospital each day?</h3>
@@ -882,26 +927,36 @@ class="section level3">
 given the all-clear to do so differs greatly depending on the
 hospital.</p>
 <p>For example, on an average day at The Stockport NHS Foundation Trust,
-93% of those eligible for discharge, remain overnight. The day when the
-most patients were left in hospital was 6 November, 2022 when 265 who
-could have been discharged. That is compared to just 20% of patients on
-an average day at Bradford Teaching Hospitals NHS Foundation Trust.</p>
+93% of those eligible for discharge remain overnight. The day when the
+most patients were left in hospital was 6 November, 2022 when 265 people
+could have been discharged but were not. That is compared to just 20% of
+patients on an average day at Bradford Teaching Hospitals NHS Foundation
+Trust.</p>
+<p>We did not receive on-the record responses from Liverpool University
+Hospitals NHS Foundation Trust and the Northern Care Alliance NHS
+Foundation Trust despite approaching them.</p>
 <p>Below is a table showing the ten trusts with the highest proportion
-of people delayed each day.</p>
+of people delayed each day over the latest year of data. You can also <a
+href="https://public.flourish.studio/visualisation/14983909/">view a
+full-screen version of the table here</a>.</p>
 <div class="flourish-embed flourish-table" data-src="visualisation/14983909"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 <p>A quarter of the trusts in our study had at least one day where no
 inpatient eligible for discharge in the entire hospital left.</p>
-<p>On a regional level, we can see that patients were about 20% more
-likely to face delays in the North West than in the East of England. The
-table below shows the aggregated days where a patient was classed as
-eligible for discharge but did not do so by the end of that day across
-the English regions.</p>
-<div class="flourish-embed flourish-chart" data-src="visualisation/14361578"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+<p>On a regional level, we can see that patients were far more likely to
+face delays in the North West than in the East of England. The table
+below shows the aggregated days where a patient was classed as eligible
+for discharge but did not do so by the end of that day across the
+English regions.</p>
+<p>You can <a
+href="https://public.flourish.studio/visualisation/15389778/">view the
+full table here</a>.</p>
+<div class="flourish-embed flourish-chart" data-src="visualisation/15389778"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 </div>
 <div id="is-it-getting-worse" class="section level3">
 <h3>Is it getting worse?</h3>
-<p>With the data available there were three overlapping months we could
-use to get a comparison between 2022 and 2023: April, May and June.</p>
+<p>With the data available for England there were three overlapping
+months we could use to get a comparison between 2022 and 2023: April,
+May and June.</p>
 <p>We were able to compare the overlapping three-month periods in 2022
 to 2023 to see if the proportion of people facing delays increased. In
 order to ensure we did not overly weigh either year on weekend days (as
@@ -909,12 +964,15 @@ Sundays are 10% more likely to see delays on average) we directly
 compared weeks 14-26 of both calendar years.</p>
 <p>The results paint a mixed picture in England.</p>
 <ul>
-<li>Nationally, the volume of daily discharge delays decreased by 1.3%
+<li>Nationally, the volume of daily discharge delays decreased by 1.1%
 comparing weeks 14-26.</li>
 <li>However, breaking this figure down by region we can see England was
-split - with London seeing the biggest rise in delays of 7% and the
-South West seeing the biggest decline of 10%.</li>
+split - with London seeing the biggest rise in delays of 7.6% and the
+East of England seeing the biggest decline of 8.9%.</li>
 </ul>
+<p>You can <a
+href="https://public.flourish.studio/visualisation/14350352/">view the
+chart below in fullscreen here</a>.</p>
 <div class="flourish-embed flourish-table" data-src="visualisation/14350352"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 </div>
 <div id="what-caused-the-delays" class="section level3">
@@ -943,6 +1001,88 @@ below</a> shows the proportions of each reason given by trusts in
 England.</p>
 <div class="flourish-embed flourish-hierarchy" data-src="visualisation/14992979"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 </div>
+</div>
+<div id="scotland" class="section level2">
+<h2>Scotland</h2>
+<div id="how-many-people-are-delayed-leaving-each-hospital-daily"
+class="section level3">
+<h3>How many people are delayed leaving each hospital daily?</h3>
+<p>We analysed the latest 12 months of discharge delay data available in
+Scotland.</p>
+<p>Official data is collected differently in Scotland than it is in
+England. <strong>At the end of each calendar month each trust calculates
+the average daily number of people affected by discharge
+delays</strong>.</p>
+<p>Nationally, the average number of people stuck in hospital when they
+were fit to leave varied between 1,811 a day during August 2022 and
+1,950 in November 2022.</p>
+<p>However it was not possible to compare individual health boards with
+one another using the Scottish data because it is not collected in a way
+that shows the proportion of patients affected by delays.</p>
+</div>
+<div id="is-the-situation-getting-worse" class="section level3">
+<h3>Is the situation getting worse?</h3>
+<p>With the Scottish data we can compare the two latest 12 month periods
+with each other.</p>
+<p>From that we can conclude more people faced delays waiting to be
+discharged from a Scottish hospital in the latest 12-month period
+(between August 2022 and July 2023) - than the previous 12 month period
+(between August 2021 and July 2022).</p>
+<p>The rise was most pronounced comparing November 2021 to 2022. The
+1,950 average number<br />
+of delayed people in November 2023 was 25% higher than the 1,563 the
+previous year. April 2023 was the only month to report a lower number of
+delays than the previous year.</p>
+<div class="flourish-embed flourish-hierarchy" data-src="visualisation/15307268"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+</div>
+<div id="what-is-causing-the-delays" class="section level3">
+<h3>What is causing the delays?</h3>
+<p>Scottish data breaks the reasons for each delay down into four
+categories:</p>
+<ul>
+<li>Health and Social Care Reasons</li>
+<li>Code 9 AWI</li>
+<li>Code 9 Non-AWI</li>
+<li>Patient and Family Related Reasons</li>
+</ul>
+<p>Code 9 AWI refers to <strong>Adults With Incapacity</strong>, which
+includes patients awaiting a highly specialist facility and where an
+interim option is not appropriate, patients for whom an interim move is
+deemed unreasonable and delays as a result of adults with <a
+href="https://www.gov.scot/policies/social-care/adults-with-incapacity/">incapacity
+legislation</a>. Non-AWI refers to patients remaining for a clinical
+reason other than because of incapacity.</p>
+<p>Aggregating the latest full year of data relating to delay reasons
+(August 2022-July 2023)- Health and Social Care Reasons were the most
+common delay cause, <strong>accounting for almost 70% of all reasons
+given</strong>.</p>
+<div class="flourish-embed flourish-hierarchy" data-src="visualisation/14992979"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+</div>
+</div>
+<div id="wales" class="section level2">
+<h2>Wales</h2>
+<p>In Wales figures for delays are measured differently, but a snapshot
+in August suggests around <strong>1,570</strong> were waiting to leave
+hospital on a given day in that month, down from around
+<strong>1,750</strong> in April when post-pandemic data started to be
+gathered again.</p>
+<p>You can <a
+href="https://www.gov.wales/nhs-activity-and-performance-summary-july-and-august-2023">view
+the Welsh statistical collection here</a>.</p>
+<p>The most common reasons for delays were “assessment issues” (39%),
+“Care Home placement arrangements” (26%) and “Home Care related issues”
+(13%).</p>
+<p>But while assessment issues appear to have reduced since April (from
+49% to 39% of all those waiting), the proportion of people waiting for
+care homes or home care has remained largely the same.</p>
+<p><a href="https://www.bbc.com/news/uk-wales-66260332">BBC Wales
+previously investigated</a> how the shortage of carers causes many
+people to spend months in hospital unnecessarily.</p>
+<p>New data obtained by a BBC Freedom of Information Request to all
+health boards, suggest long waits are still an issue.</p>
+<p>In July, <strong>649</strong> people were waiting for more than a
+month, while <strong>185</strong> were waiting more than three months to
+return home or to another appropriate setting.</p>
 </div>
 <div id="expert-quotes" class="section level2">
 <h2>Expert quotes</h2>
@@ -988,8 +1128,69 @@ the last moment. Ultimately, funding for social care needs to come
 alongside proper reform which can put in place a stable, thriving and
 growing social care workforce to meet growing demand over the coming
 decades.”</p>
+<p><strong>Royal College of Nursing (RCN)</strong></p>
+<p>Director for England, Patricia Marquis, said: “No patient should
+spend longer in hospital than necessary, but a lack of social or home
+care is leaving many waiting to be discharged - when they should be
+getting more appropriate care elsewhere.</p>
+<p>“At the heart of this is persistent understaffing across all care
+settings – but particularly in social care. We would like to see a
+long-term plan for social care that matches the ambitions of the recent
+NHS Long-term Workforce Plan. Put simply, we need more nursing staff in
+the community and social care sector.</p>
+<p>“Nursing staff will do everything they can to provide the right care
+for all their patients but without the investment to grow the whole of
+the nursing workforce, they will continue to face massive pressures and
+it is their patients who will pay the price. “</p>
 <div id="rights-of-response" class="section level3">
 <h3>Rights of Response</h3>
+<p><strong>Department of Health and Social Care (DHSC)</strong></p>
+<p>A spokesman said: “It is vital people receive the right care in the
+right place, and we are working to ensure patients are discharged safely
+from hospital, as soon as they are medically fit to do so. A record £1.6
+billion investment is supporting this, on top of the £700 million to
+ease hospital pressures over last winter and the £42.6 million fund to
+support innovation in adult social care.</p>
+<p>“To further bolster the workforce, we are continuing our Made With
+Care recruitment campaign – designed to reach millions of people – and
+the average pay for care workers has also increased. Staff retention is
+equally as important, which is why we are also investing almost £2
+billion over two years to help councils support the workforce.”</p>
+<p>BACKGROUND (supplied by DHSC)</p>
+<ul>
+<li>As of the end of September, the number of patients each day who are
+ready to be discharged has reduced by approximately 1,700 (12%) in
+England since January.</li>
+<li>As part of our £8.1 billion investment, an extra £1.6 billion has
+been provided over the next two years through the Better Care Fund (BCF)
+to improve hospital discharge and outcomes for people.</li>
+<li>The government is providing £600 million this year, and £1 billion
+next year through the Discharge Fund, to support timely and safe
+discharge from hospital into the community by reducing the number of
+people delayed in hospital awaiting social care.</li>
+<li>This follows the department providing £500 million to local areas
+through the Discharge Fund for winter 2022/23.</li>
+<li>This money was used by local authorities and Integrated Care Boards
+(ICBs) to deliver additional care packages and beds, provide equipment
+to support people to return home and to boost the social care
+workforce.</li>
+<li>Also in winter 2022/23, we provided up to £200 million funding that
+allowed ICBs to purchase thousands of step-down beds and packages of
+care. This freed up much needed acute beds and clinical capacity.</li>
+<li>We are accelerating digital transformation in adult social care,
+improving the collection and sharing of data, rolling out individual
+care records, and funding home adaptations to support people to remain
+independent at home.</li>
+<li>The NHS has already rolled out 10,000 virtual ward beds, ahead of
+winter, to help patients be cared for in their own homes where possible
+and ease pressure on hospitals.</li>
+<li>We are also funding four new projects through the government’s Adult
+Social Care Technology Fund to transform the use of digital technology
+in adult social care to drive independence, to help identify
+care-focused technology solutions that have the potential for wider
+rollout within the sector, and in doing so provide evidence to
+prioritise investments in care technology.</li>
+</ul>
 <p><strong>Stockport NHS Foundation Trust:</strong></p>
 <p>A spokesman said: “Our area has a significantly higher population of
 older people than in other areas of Greater Manchester, who are living
@@ -1003,6 +1204,13 @@ taking a number of measures to tackle these issues, including our
 virtual ward programme treating people at home. As a result we have made
 significant reductions in delayed discharges and reducing long lengths
 of stay.”</p>
+<p><strong>Stockport Council</strong></p>
+<p>A council spokesperson said: “We understand how important it is to
+people’s wellbeing and health to discharge medically fit patients in a
+timely manner with suitable care in place. This is a key priority for us
+in Stockport and working together with our integrated health and care
+partners to ensure patients can be discharged to their own home or an
+alternative intermediate care setting where appropriate.”</p>
 </div>
 </div>
 
